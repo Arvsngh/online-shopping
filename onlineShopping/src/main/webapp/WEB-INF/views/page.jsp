@@ -43,16 +43,26 @@
 
 		<!-- Page Content -->
 		<div class="content">
+		
+		
+		<!-- Load only when user clicks home -->
 			<c:if test="${userClickHome == true }">
 				<%@include file="home.jsp"%>
 			</c:if>
 
+            <!-- Load only when user clicks About -->
 			<c:if test="${userClickAbout == true }">
 				<%@include file="about.jsp"%>
 			</c:if>
-
+     
+           <!-- Load only when user clicks contact -->
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
+			</c:if>
+			
+			<!-- Load only when user clicks Allproducts or CategoryProducts -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 
 		</div>
